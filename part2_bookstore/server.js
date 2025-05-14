@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
 
     fs.readFile(absPath, (err, data) => {
         if (err) {
-            // Page not found
+            // Page not
             fs.readFile('./pages/404.html', (error404, data404) => {
                 res.writeHead(404, { 'Content-Type': 'text/html' });
                 res.end(data404);
@@ -24,5 +24,5 @@ const server = http.createServer((req, res) => {
 
 server.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
-    
+
 });
